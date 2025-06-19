@@ -583,9 +583,9 @@ async def txt_handler(bot: Client, m: Message):
     except asyncio.TimeoutError:
         raw_text4 = 'WOTKING_TOKEN'
 
-    await editable.edit(f"**🔹Send the Video Thumb URL\n🔹Please wait..20sec...⏳ for use default**")
+    await editable.edit(f"**🔹Send the Video Thumb URL\n🔹Please wait..10sec...⏳ for use default.or /d**")
     try:
-        input6: Message = await bot.listen(editable.chat.id, timeout=20)
+        input6: Message = await bot.listen(editable.chat.id, timeout=10)
         raw_text6 = input6.text
         await input6.delete(True)
     except asyncio.TimeoutError:
